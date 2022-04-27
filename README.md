@@ -1,2 +1,2 @@
 # C-CODE
-这是一个有趣的代码.
+Pracitce
