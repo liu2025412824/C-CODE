@@ -1,5 +1,6 @@
 //冒泡排序加强版
 #include<stdio.h>
+#include<string.h>
 struct Stu
 {
 	char name[20];
@@ -17,7 +18,7 @@ void Swap(char* buf1, char* buf2, int width)
 		buf2++;
 	}
 }
-void bubble_sort(void* base, int sz, int width,int (*cmp)(void* e1,void* e2))
+void bubble_sort(void* base, int sz, int width,int (*cmp)(void* e1, void* e2))
 {
 	int i = 0;
 	for (i = 0; i < sz - 1; i++)
@@ -61,6 +62,7 @@ void test2()
 	int sz = sizeof(s) / sizeof(s[0]);
 	//bubble_sort(s, sz, sizeof(s[0]), cmp_stu_by_age);
 	bubble_sort(s, sz, sizeof(s[0]), cmp_stu_by_name);
+	printf("%s %s %s\n", s[0].name, s[1].name, s[2].name);
 }
 int main()
 {
